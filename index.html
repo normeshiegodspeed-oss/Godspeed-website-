@@ -1,22 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godspeed Fashion Zone</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 45px 20px;
+            background: white;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 8px;
+        }
+
+        .products {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            margin-bottom: 25px;
+        }
+
+        .product-box {
+            background: white;
+            padding: 25px;
+            margin: 15px auto;
+            max-width: 400px;
+            border-radius: 12px;
+        }
+
+        .product-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Godspeed website development</h1>
-  <h2>About me</h2> 
-  <p> My name is Godspeed 
-  I am learning website development from the Best AI
-  Chat GPT my gee  </p>
-  <h2>What am learning</h2>
-  <ul>   <li>HTML</li>
-  <li>Javascript</li>
-  <li>CSS</li>  </ul>
-  <h3>look me up on Google</h3>
-  <a href="https://www.google.com">Visit Google</a>
-</body> </a>
-  
+    <header>
+        <h1>GODSPEED</h1>
+        <p>Fashion Zone</p>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Godspeed Fashion Zone</h2>
+        <p>Discover stylish fashion for ladies and gents.</p>
+
+        <a class="button" href="#products">Shop Now</a>
+    </section>
+
+    <section class="products" id="products">
+
+        <h2>Our Fashion</h2>
+
+        <div class="product-box">
+            <h3>👠 Ladies' Shoes</h3>
+            <p>Beautiful and stylish shoes.</p>
+            <p class="price">Prices available</p>
+        </div>
+
+        <div class="product-box">
+            <h3>👜 Ladies' Bags</h3>
+            <p>Trendy bags for every occasion.</p>
+            <p class="price">Prices available</p>
+        </div>
+
+        <div class="product-box">
+            <h3>👔 Gents' Fashion</h3>
+            <p>Smart and stylish clothing for men.</p>
+            <p class="price">Prices available</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Godspeed Fashion Zone</p>
+        <p>Contact us for orders and enquiries.</p>
+    </footer>
+
+</body>
 </html>
