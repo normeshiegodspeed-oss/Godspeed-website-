@@ -13,6 +13,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #f5f5f5;
@@ -51,16 +55,17 @@
             text-decoration: none;
             margin: 0 8px;
             font-size: 15px;
+            display: inline-block;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
-        /* HERO */
+        /* HOME */
         .hero {
             text-align: center;
-            padding: 55px 20px;
+            padding: 60px 20px;
             background: white;
         }
 
@@ -136,15 +141,12 @@
             background: #333;
         }
 
-        /* PRODUCT SECTION */
+        /* PRODUCT SECTIONS */
         .product-section {
             padding: 55px 20px;
             background: #eee;
             text-align: center;
-        }
-
-        .product-section:nth-of-type(even) {
-            background: #f5f5f5;
+            min-height: 500px;
         }
 
         .product-section h2 {
@@ -196,14 +198,6 @@
             margin-bottom: 8px;
         }
 
-        .ghana-price {
-            color: #222;
-        }
-
-        .uganda-price {
-            color: #222;
-        }
-
         /* ORDER BUTTON */
         .order-btn {
             display: inline-block;
@@ -216,6 +210,21 @@
         }
 
         .order-btn:hover {
+            background: #333;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin-top: 35px;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+        }
+
+        .back-btn:hover {
             background: #333;
         }
 
@@ -248,7 +257,6 @@
             }
 
             nav a {
-                display: inline-block;
                 margin: 5px 6px;
             }
 
@@ -403,12 +411,10 @@
             Comfortable and stylish sneakers for every occasion.
         </p>
 
-
         <div class="product-grid">
 
 
-            <!-- MEN'S SNEAKER 1 -->
-
+            <!-- SNEAKER 1 -->
             <div class="product-card">
 
                 <img
@@ -418,11 +424,11 @@
 
                 <h3>Classic Black Sneaker</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵150–200
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 50,000
                 </p>
 
@@ -430,6 +436,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20the%20Classic%20Black%20Sneaker."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -437,8 +444,7 @@
             </div>
 
 
-            <!-- MEN'S SNEAKER 2 -->
-
+            <!-- SNEAKER 2 -->
             <div class="product-card">
 
                 <img
@@ -448,11 +454,11 @@
 
                 <h3>Men's Sneaker 2</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵150–200
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 50,000
                 </p>
 
@@ -460,6 +466,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Men's%20Sneaker%202."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -467,8 +474,7 @@
             </div>
 
 
-            <!-- MEN'S SNEAKER 3 -->
-
+            <!-- SNEAKER 3 -->
             <div class="product-card">
 
                 <img
@@ -478,11 +484,11 @@
 
                 <h3>Men's Sneaker 3</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵150–200
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 50,000
                 </p>
 
@@ -490,6 +496,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Men's%20Sneaker%203."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -497,6 +504,10 @@
             </div>
 
         </div>
+
+        <a href="#categories" class="back-btn">
+            ← Back to Categories
+        </a>
 
     </section>
 
@@ -513,12 +524,10 @@
             Beautiful and stylish shoes for every occasion.
         </p>
 
-
         <div class="product-grid">
 
 
-            <!-- LADIES SHOE 1 -->
-
+            <!-- SHOE 1 -->
             <div class="product-card">
 
                 <img
@@ -528,11 +537,11 @@
 
                 <h3>Ladies' Shoe 1</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵80–150
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 30,000–50,000
                 </p>
 
@@ -540,6 +549,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Shoe%201."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -547,8 +557,7 @@
             </div>
 
 
-            <!-- LADIES SHOE 2 -->
-
+            <!-- SHOE 2 -->
             <div class="product-card">
 
                 <img
@@ -558,11 +567,11 @@
 
                 <h3>Ladies' Shoe 2</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵80–150
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 30,000–50,000
                 </p>
 
@@ -570,6 +579,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Shoe%202."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -577,8 +587,7 @@
             </div>
 
 
-            <!-- LADIES SHOE 3 -->
-
+            <!-- SHOE 3 -->
             <div class="product-card">
 
                 <img
@@ -588,11 +597,11 @@
 
                 <h3>Ladies' Shoe 3</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵80–150
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 30,000–50,000
                 </p>
 
@@ -600,6 +609,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Shoe%203."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -607,8 +617,7 @@
             </div>
 
 
-            <!-- LADIES SHOE 4 -->
-
+            <!-- SHOE 4 -->
             <div class="product-card">
 
                 <img
@@ -618,11 +627,11 @@
 
                 <h3>Ladies' Shoe 4</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵80–150
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 30,000–50,000
                 </p>
 
@@ -630,6 +639,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Shoe%204."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -637,8 +647,7 @@
             </div>
 
 
-            <!-- LADIES SHOE 5 -->
-
+            <!-- SHOE 5 -->
             <div class="product-card">
 
                 <img
@@ -648,11 +657,11 @@
 
                 <h3>Ladies' Shoe 5</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵80–150
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 30,000–50,000
                 </p>
 
@@ -660,6 +669,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Shoe%205."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -667,6 +677,10 @@
             </div>
 
         </div>
+
+        <a href="#categories" class="back-btn">
+            ← Back to Categories
+        </a>
 
     </section>
 
@@ -683,12 +697,10 @@
             Stylish bags for everyday fashion and special occasions.
         </p>
 
-
         <div class="product-grid">
 
 
-            <!-- LADIES BAG 1 -->
-
+            <!-- BAG 1 -->
             <div class="product-card">
 
                 <img
@@ -698,11 +710,11 @@
 
                 <h3>Ladies' Bag 1</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵200
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 50,000
                 </p>
 
@@ -710,6 +722,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Bag%201."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -717,8 +730,7 @@
             </div>
 
 
-            <!-- LADIES BAG 2 -->
-
+            <!-- BAG 2 -->
             <div class="product-card">
 
                 <img
@@ -728,11 +740,11 @@
 
                 <h3>Ladies' Bag 2</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵200
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 50,000
                 </p>
 
@@ -740,6 +752,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Bag%202."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -747,8 +760,7 @@
             </div>
 
 
-            <!-- LADIES BAG 3 -->
-
+            <!-- BAG 3 -->
             <div class="product-card">
 
                 <img
@@ -758,11 +770,11 @@
 
                 <h3>Ladies' Bag 3</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵200
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 50,000
                 </p>
 
@@ -770,6 +782,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Bag%203."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -777,8 +790,7 @@
             </div>
 
 
-            <!-- LADIES BAG 4 -->
-
+            <!-- BAG 4 -->
             <div class="product-card">
 
                 <img
@@ -788,11 +800,11 @@
 
                 <h3>Ladies' Bag 4</h3>
 
-                <p class="price ghana-price">
+                <p class="price">
                     🇬🇭 Ghana: GH₵200
                 </p>
 
-                <p class="price uganda-price">
+                <p class="price">
                     🇺🇬 Uganda: UGX 50,000
                 </p>
 
@@ -800,6 +812,7 @@
                     href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Ladies'%20Bag%204."
                     class="order-btn"
                     target="_blank"
+                    rel="noopener"
                 >
                     Order on WhatsApp
                 </a>
@@ -807,6 +820,10 @@
             </div>
 
         </div>
+
+        <a href="#categories" class="back-btn">
+            ← Back to Categories
+        </a>
 
     </section>
 
@@ -825,6 +842,7 @@
             href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20would%20like%20to%20make%20an%20order."
             class="button"
             target="_blank"
+            rel="noopener"
         >
             Chat on WhatsApp
         </a>
