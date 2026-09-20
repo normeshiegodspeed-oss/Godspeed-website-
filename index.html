@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +20,7 @@
             color: #222;
         }
 
+        /* HEADER */
         header {
             background: #111;
             color: white;
@@ -35,66 +37,103 @@
             font-size: 16px;
         }
 
+        /* NAVIGATION */
+        nav {
+            background: #222;
+            text-align: center;
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
         .hero {
             text-align: center;
-            padding: 45px 20px;
+            padding: 55px 20px;
             background: white;
         }
 
         .hero h2 {
-            font-size: 28px;
+            font-size: 30px;
             margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 17px;
             margin-bottom: 25px;
+            color: #555;
         }
 
-        .button,
-        .order-btn {
+        .button {
             display: inline-block;
             background: #111;
             color: white;
             text-decoration: none;
             padding: 13px 25px;
             border-radius: 8px;
-            margin-top: 10px;
         }
 
-        .products {
-            padding: 35px 20px;
+        /* CATEGORY SECTION */
+        .categories {
+            padding: 50px 20px;
             text-align: center;
         }
 
-        .products h2 {
-            margin-bottom: 25px;
+        .categories h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
         }
 
-        .product-box {
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .category-card {
             background: white;
-            padding: 25px;
-            margin: 15px auto;
-            max-width: 400px;
+            padding: 30px 20px;
             border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
         }
 
-        .product-box h3 {
+        .category-card h3 {
             margin-bottom: 10px;
         }
 
-        .price {
-            font-weight: bold;
-            margin: 15px 0;
+        .category-card p {
+            color: #666;
+            margin-bottom: 15px;
         }
 
-        /* Men's Sneakers */
-
-        #mens-sneakers {
-            padding: 35px 20px;
-            text-align: center;
+        .category-card a {
+            display: inline-block;
             background: #111;
             color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 7px;
+        }
+
+        /* MEN'S SNEAKERS */
+        #mens-sneakers {
+            padding: 55px 20px;
+            background: #eee;
+            text-align: center;
         }
 
         #mens-sneakers h2 {
@@ -103,197 +142,279 @@
         }
 
         #mens-sneakers > p {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            color: #555;
         }
 
+        /* PRODUCT GRID */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
+            gap: 25px;
+            max-width: 1100px;
             margin: auto;
         }
 
+        /* PRODUCT CARD */
         .product-card {
             background: white;
-            color: #222;
             padding: 15px;
             border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
 
+        /* PRODUCT IMAGE */
         .product-card img {
             width: 100%;
             height: 250px;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 10px;
-            display: block;
+            background: #f8f8f8;
         }
 
         .product-card h3 {
-            margin: 15px 0 8px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 19px;
         }
 
-        .product-card p {
+        .product-card .price {
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .product-card .order-btn {
+        /* ORDER BUTTON */
+        .order-btn {
+            display: inline-block;
             background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-top: 5px;
         }
 
+        .order-btn:hover {
+            background: #333;
+        }
+
+        /* FOOTER */
         footer {
             background: #111;
             color: white;
             text-align: center;
-            padding: 25px 15px;
-            margin-top: 20px;
+            padding: 30px 15px;
+            margin-top: 0;
+        }
+
+        footer p {
+            margin: 7px 0;
+        }
+
+        /* PHONE SCREEN */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .hero h2 {
+                font-size: 25px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .product-card img {
+                height: 230px;
+            }
         }
     </style>
 </head>
 
+
 <body>
 
+    <!-- HEADER -->
     <header>
-        <h1>GODSPEED</h1>
-        <p>Fashion Zone</p>
+        <h1>Godspeed Fashion Zone</h1>
+        <p>Fashion for Everyone</p>
     </header>
 
-    <section class="hero">
-        <h2>Welcome to Godspeed Fashion Zone</h2>
-        <p>Discover stylish fashion for ladies and gents.</p>
 
-        <a class="button" href="#products">Shop Now</a>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#mens-sneakers">Men's Sneakers</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <h2>Welcome to Godspeed Fashion Zone</h2>
+
+        <p>
+            Discover stylish and affordable fashion for men and women.
+        </p>
+
+        <a href="#categories" class="button">
+            Shop Now
+        </a>
+
     </section>
 
 
-    <!-- ALL PRODUCTS -->
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
 
-    <section class="products" id="products">
+        <h2>Shop Our Categories</h2>
 
-        <h2>Our Products</h2>
+        <div class="category-grid">
 
-        <div class="product-box">
-            <h3>Women's Dress</h3>
-            <p>Elegant and stylish women's dress.</p>
-            <p class="price">GH₵ 150</p>
+            <div class="category-card">
+                <h3>Men's Sneakers</h3>
 
-            <a class="button"
-               href="https://wa.me/233546709759?text=Hello%2C%20I'm%20interested%20in%20the%20Women's%20Dress."
-               target="_blank">
-                Order on WhatsApp
-            </a>
+                <p>
+                    Stylish and comfortable sneakers for men.
+                </p>
+
+                <a href="#mens-sneakers">
+                    View Sneakers
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <h3>Men's Casual</h3>
+
+                <p>
+                    Smart and stylish casual fashion for men.
+                </p>
+
+                <a href="#contact">
+                    Coming Soon
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <h3>Men's Executive</h3>
+
+                <p>
+                    Elegant clothing for a professional look.
+                </p>
+
+                <a href="#contact">
+                    Coming Soon
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <h3>Ladies' Fashion</h3>
+
+                <p>
+                    Shoes, bags and more stylish fashion items.
+                </p>
+
+                <a href="#contact">
+                    Coming Soon
+                </a>
+            </div>
+
         </div>
-
-
-        <div class="product-box">
-            <h3>Women's Shoes</h3>
-            <p>Beautiful and stylish shoes.</p>
-            <p class="price">From GH₵ 60</p>
-
-            <a class="button"
-               href="https://wa.me/233546709759?text=Hello%2C%20I'm%20interested%20in%20the%20Women's%20Shoes."
-               target="_blank">
-                Order on WhatsApp
-            </a>
-        </div>
-
-
-        <div class="product-box">
-            <h3>Ladies' Handbag</h3>
-            <p>Stylish handbag for everyday fashion.</p>
-            <p class="price">From GH₵ 200</p>
-
-            <a class="button"
-               href="https://wa.me/233546709759?text=Hello%2C%20I'm%20interested%20in%20the%20Ladies%27%20Handbag."
-               target="_blank">
-                Order on WhatsApp
-            </a>
-        </div>
-
-
-        <div class="product-box">
-            <h3>Men's Shirt</h3>
-            <p>Smart and fashionable men's shirt.</p>
-            <p class="price">GH₵ 100</p>
-
-            <a class="button"
-               href="https://wa.me/233546709759?text=Hello%2C%20I'm%20interested%20in%20the%20Men's%20Shirt."
-               target="_blank">
-                Order on WhatsApp
-            </a>
-        </div>
-
 
     </section>
 
 
     <!-- MEN'S SNEAKERS -->
-
     <section id="mens-sneakers">
 
         <h2>Men's Sneakers</h2>
 
-        <p>Comfortable and stylish sneakers.</p>
+        <p>
+            Comfortable and stylish sneakers for every occasion.
+        </p>
 
 
         <div class="product-grid">
 
 
-            <!-- Sneaker 1 -->
-
+            <!-- SNEAKER 1 -->
             <div class="product-card">
 
-                <img src="sneaker.1.png"
-                     alt="Classic Black Sneaker">
+                <img
+                    src="seanker.1.png"
+                    alt="Classic Black Sneaker"
+                >
 
                 <h3>Classic Black Sneaker</h3>
 
-                <p>GH₵200</p>
+                <p class="price">
+                    GH₵200
+                </p>
 
-                <a href="https://wa.me/233546709759?text=I%20want%20the%20Classic%20Black%20Sneaker"
-                   class="order-btn"
-                   target="_blank">
+                <a
+                    href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20the%20Classic%20Black%20Sneaker."
+                    class="order-btn"
+                    target="_blank"
+                >
                     Order on WhatsApp
                 </a>
 
             </div>
 
 
-            <!-- Sneaker 2 -->
-
+            <!-- SNEAKER 2 -->
             <div class="product-card">
 
-                <img src="sneaker.2.png"
-                     alt="Black Air Sneaker">
+                <img
+                    src="seanker.2.png"
+                    alt="Men's Sneaker 2"
+                >
 
-                <h3>Black Air Sneaker</h3>
+                <h3>Men's Sneaker 2</h3>
 
-                <p>GH₵200</p>
+                <p class="price">
+                    GH₵200
+                </p>
 
-                <a href="https://wa.me/233546709759?text=I%20want%20the%20Black%20Air%20Sneaker"
-                   class="order-btn"
-                   target="_blank">
+                <a
+                    href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Men's%20Sneaker%202."
+                    class="order-btn"
+                    target="_blank"
+                >
                     Order on WhatsApp
                 </a>
 
             </div>
 
 
-            <!-- Sneaker 3 -->
-
+            <!-- SNEAKER 3 -->
             <div class="product-card">
 
-                <img src="sneaker.3.png"
-                     alt="White Air Sneaker">
+                <img
+                    src="seanker.3.png"
+                    alt="Men's Sneaker 3"
+                >
 
-                <h3>White Air Sneaker</h3>
+                <h3>Men's Sneaker 3</h3>
 
-                <p>GH₵200</p>
+                <p class="price">
+                    GH₵200
+                </p>
 
-                <a href="https://wa.me/233546709759?text=I%20want%20the%20White%20Air%20Sneaker"
-                   class="order-btn"
-                   target="_blank">
+                <a
+                    href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20want%20to%20order%20Men's%20Sneaker%203."
+                    class="order-btn"
+                    target="_blank"
+                >
                     Order on WhatsApp
                 </a>
 
@@ -305,15 +426,29 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- CONTACT -->
+    <section class="hero" id="contact">
 
+        <h2>Contact Godspeed Fashion Zone</h2>
+
+        <p>
+            Interested in any of our products?
+            Contact us on WhatsApp to place your order.
+        </p>
+
+        <a
+            href="https://wa.me/233546709759?text=Hello%20Godspeed%20Fashion%20Zone,%20I%20would%20like%20to%20make%20an%20order."
+            class="button"
+            target="_blank"
+        >
+            Chat on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
     <footer>
 
-        <p>© 2026 Godspeed Fashion Zone</p>
-
-        <p>Contact us for orders and enquiries.</p>
-
-    </footer>
-
-</body>
-</html>
+        <p>
+            <strong>Godspeed Fashion Zone
